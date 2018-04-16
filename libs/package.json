@@ -1,21 +1,21 @@
 {
   "$schema": "../../node_modules/ng-packagr/package.schema.json",
   "name": "@voxtecnologia/alert",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^5.1.0",
     "@angular/core": "^5.1.0",
     "@angular/compiler": "5.2.6",
     "bootstrap": "^4.0.0",
-    "ngx-bootstrap": "^2.0.3"
+    "@ng-bootstrap/ng-bootstrap": "^1.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ferreirajose/vox-alert.git"
+    "url": "git+https://github.com/ferreirajose/VoxAltert.git"
   },
   "keywords": [
     "modal",
@@ -25,7 +25,7 @@
   ],
   "author": "José Ferreira da Silva",
   "license": "ISC",
-  "homepage": "https://github.com/ferreirajose/vox-alert#readme",
+  "homepage": "https://github.com/ferreirajose/VoxAltert#readme",
   "ngPackage": {
     "lib": {
       "entryFile": "index.ts"

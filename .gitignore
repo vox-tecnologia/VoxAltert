@@ -45,3 +45,4 @@ testem.log
 Thumbs.db
 .tgz
 vox.tgz
+package-lock.json
