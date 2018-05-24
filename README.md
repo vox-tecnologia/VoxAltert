@@ -3,13 +3,13 @@
 
 
 ```sh
-$ npm install --global vox-alert
+$ npm i --global @voxtecnologia/alert
 ```
 
 #### 2. Install Vox Alert in your project devDependencies:
 
 ```sh
-$ npm install --save-dev vox-alert
+$ npm i --save @voxtecnologia/alert
 ```
 
 #### 3. Setup Module
@@ -17,7 +17,7 @@ $ npm install --save-dev vox-alert
 Import VoxAlertModule into your app.module.
 
 ```ts
-import { VoxAlertModule } from 'vox-alert';
+import { AlertModule } from '@voxtecnologia/alert';
 
 @NgModule({
   ...
@@ -34,7 +34,7 @@ Import AlertService into your app.component
 ```ts
 import { Component } from '@angular/core';
 
-import { AlertService } from 'vox-alert/alert/alert-service';
+import { AlertService } from '@voxtecnologia/alert/alert-service';
 
 @Component({
   selector: 'app-root',
