@@ -1,2 +1,2 @@
-export * from './src/app/alert/alert.module';
-export * from './src/app/alert/alert-service';
+export * from './src/app/alert/vox-alert.module';
+export * from './src/app/alert/vox-alert-service';

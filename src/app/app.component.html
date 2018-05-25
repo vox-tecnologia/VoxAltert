@@ -18,6 +18,13 @@
   </li>
 </ul>
 
-<button type="button" class="btn btn-info" (click)="open()">Create template modal</button>
+<button type="button" class="btn btn-info" (click)="open()">Alert</button>
+<button type="button" class="btn btn-danger" (click)="confirm()">confirm</button>
 
 <app-alert></app-alert>
+
+<app-vox-alert-confirm
+  ok="testeok"
+  close="textoclose">
+
+</app-vox-alert-confirm>

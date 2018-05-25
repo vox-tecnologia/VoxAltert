@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "vox-alert": ["libs/vox-alert/index"]
+      "vox-alert": ["libs/alert/index"]
     }
   },
 }

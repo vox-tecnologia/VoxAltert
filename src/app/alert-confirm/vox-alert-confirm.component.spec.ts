@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AlertComponent } from './alert.component';
+import { VoxAlertConfirmComponent } from './vox-alert-confirm.component';
 
-describe('AlertComponent', () => {
-  let component: AlertComponent;
-  let fixture: ComponentFixture<AlertComponent>;
+describe('AlertConfirmComponent', () => {
+  let component: VoxAlertConfirmComponent;
+  let fixture: ComponentFixture<VoxAlertConfirmComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AlertComponent ]
+      declarations: [ VoxAlertConfirmComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AlertComponent);
+    fixture = TestBed.createComponent(VoxAlertConfirmComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

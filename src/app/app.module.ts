@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { AlertModule } from './alert/alert.module';
+import { VoxAlertModule } from './alert/vox-alert.module';
+import { VoxAlertConfirmModule} from './alert-confirm/vox-alert-confirm.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { AlertModule } from './alert/alert.module';
   ],
   imports: [
     BrowserModule,
-    AlertModule
+    VoxAlertModule,
+    VoxAlertConfirmModule
   ],
   providers: [],
   bootstrap: [AppComponent]

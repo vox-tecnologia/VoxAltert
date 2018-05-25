@@ -10,17 +10,18 @@ import {
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 import { Subscription } from 'rxjs/Subscription';
-import { AlertService } from './alert-service';
+import { VoxAlertService } from './vox-alert-service';
 
 @Component({
   selector: 'app-alert',
-  templateUrl: './alert.component.html',
-  styleUrls: ['./alert.component.css']
+  templateUrl: './vox-alert.component.html',
+  styleUrls: ['./vox-alert.component.css']
 })
-export class AlertComponent implements OnInit, OnDestroy {
+export class VoxAlertComponent implements OnInit, OnDestroy {
   @ViewChild('modal') private content: ElementRef;
 
   private _subscription: Subscription;
+  private _hidescription: Subscription;
   public show: boolean;
   public modalRef: NgbModalRef;
   public body: string;
@@ -29,7 +30,7 @@ export class AlertComponent implements OnInit, OnDestroy {
 
   constructor(
     private modalService: NgbModal,
-    private alertService: AlertService
+    private alertService: VoxAlertService
   ) {
     this.show = false;
   }
@@ -37,17 +38,20 @@ export class AlertComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this._subscription = this.alertService.loaderState.subscribe(state => {
       if (state.show) {
-        this.body = state.mBody;
-        this.alert = state.mAlert;
-        this.title = state.mTitle;
-        this.modalRef = this.modalService.open(this.content);
-        return;
+        this.body = state.body;
+        this.alert = state.alert;
+        this.title = state.title;
+        this.modalRef = this.modalService.open(this.content, {size: state.size});
       }
-      this.modalRef.close();
     });
+  }
+
+  close() {
+    this.modalRef.dismiss();
   }
 
   ngOnDestroy(): void {
     this._subscription.unsubscribe();
   }
+
 }
