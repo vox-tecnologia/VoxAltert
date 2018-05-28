@@ -19,7 +19,7 @@ import { EventEmitterService } from './event-emitter.service';
   templateUrl: './vox-alert-confirm.component.html',
   styleUrls: ['./vox-alert-confirm.component.css']
 })
-export class VoxAlertConfirmComponent implements OnInit {
+export class VoxAlertConfirmComponent implements OnInit, OnDestroy {
 
   @ViewChild('modal') private content: ElementRef;
 

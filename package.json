@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "copy": "node copy.js",
-    "rm": "rm -rf libs/alert",
+    "rm": "rm -rf libs/alert && rm -rf libs/alert-confirm",
     "build:copy": "cp README.md vox/",
     "build:clear": "rm -rf vox/ && rm -rf dist/",
     "build:prod": "ng-packagr -p libs/package.json",
