@@ -9,7 +9,7 @@ import {
 
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { VoxAlertService } from './vox-alert-service';
 
 @Component({
