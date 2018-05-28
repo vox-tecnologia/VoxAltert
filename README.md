@@ -17,7 +17,7 @@ $ npm i --save @voxtecnologia/alert
 Import VoxAlertModule into your app.module.
 
 ```ts
-import { AlertModule } from '@voxtecnologia/alert';
+import { VoxAlertModule } from '@voxtecnologia/alert/';
 
 @NgModule({
   ...
@@ -34,7 +34,7 @@ Import AlertService into your app.component
 ```ts
 import { Component } from '@angular/core';
 
-import { AlertService } from '@voxtecnologia/alert/alert-service';
+import { VoxAlertService } from '@voxtecnologia/alert/';
 
 @Component({
   selector: 'app-root',
