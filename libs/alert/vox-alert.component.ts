@@ -10,23 +10,18 @@ import {
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 import { Subscription } from 'rxjs/Subscription';
-
-import { VoxAlertConfirmService } from './vox-alert-confirm-service';
-import { EventEmitterService } from './event-emitter.service';
+import { VoxAlertService } from './vox-alert-service';
 
 @Component({
-  selector: 'app-vox-alert-confirm',
-  templateUrl: './vox-alert-confirm.component.html',
-  styleUrls: ['./vox-alert-confirm.component.css']
+  selector: 'app-alert',
+  templateUrl: './vox-alert.component.html',
+  styleUrls: ['./vox-alert.component.css']
 })
-export class VoxAlertConfirmComponent implements OnInit {
-
+export class VoxAlertComponent implements OnInit, OnDestroy {
   @ViewChild('modal') private content: ElementRef;
 
-  @Input() public close: string;
-  @Input() public ok: string;
-
   private _subscription: Subscription;
+  private _hidescription: Subscription;
   public show: boolean;
   public modalRef: NgbModalRef;
   public body: string;
@@ -35,15 +30,13 @@ export class VoxAlertConfirmComponent implements OnInit {
 
   constructor(
     private modalService: NgbModal,
-    private confirmService: VoxAlertConfirmService
+    private alertService: VoxAlertService
   ) {
     this.show = false;
-    this.close = 'Close';
-    this.ok = 'Confirmer';
   }
 
   ngOnInit(): void {
-    this._subscription = this.confirmService.loaderState.subscribe(state => {
+    this._subscription = this.alertService.loaderState.subscribe(state => {
       if (state.show) {
         this.body = state.body;
         this.alert = state.alert;
@@ -53,23 +46,12 @@ export class VoxAlertConfirmComponent implements OnInit {
     });
   }
 
-  hide() {
-    this.modalRef.close();
-    EventEmitterService.get('close').emit({
-      confirm: true,
-      text: 'btn close'
-    });
-  }
-
-  confirme() {
-    this.modalRef.close();
-    EventEmitterService.get('confirm').emit({
-      confirm: true,
-      text: 'btn confirme'
-    });
+  close() {
+    this.modalRef.dismiss();
   }
 
   ngOnDestroy(): void {
     this._subscription.unsubscribe();
   }
+
 }

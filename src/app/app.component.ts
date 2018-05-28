@@ -17,8 +17,10 @@ export class AppComponent {
       private alertService: VoxAlertService,
       private confirmService: VoxAlertConfirmService
     ) {
+
       EventEmitterService.get('confirm').subscribe(data => console.log(data));
       EventEmitterService.get('close').subscribe(data => console.log(data));
+
     }
 
     open() {
@@ -28,8 +30,4 @@ export class AppComponent {
     confirm() {
       this.confirmService.openModalConfirme('confirmService', 'Modal title', 'danger');
     }
-
-     teste() {
-
-     }
 }

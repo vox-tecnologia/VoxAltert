@@ -1,18 +1,20 @@
 import { Injectable, Input } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
-import { EventEmitterService } from './event-emitter.service';
+
 @Injectable()
-export class VoxAlertConfirmService {
+export class VoxAlertService {
 
   private _loaderSubject: Subject<any>;
-  private _confirme: boolean;
-  public loaderState: any;
+  private _hiderSubject: Subject<any>;
 
+  public loaderState: any;
+  public hiderState: any;
 
   constructor() {
     this._loaderSubject = new Subject();
+    this._hiderSubject = new Subject();
     this.loaderState = this._loaderSubject.asObservable();
-    this._confirme = false;
+    this.hiderState = this._hiderSubject.asObservable();
   }
 
   /**
@@ -23,7 +25,7 @@ export class VoxAlertConfirmService {
    * @param [size] size of modal || sm || lg
    * @memberof VoxAlertService
    */
-  public openModalConfirme(message?: string, title?: string, alert?: string, size?: string): void {
+  public openModal(message?: string, title?: string, alert?: string, size?: string): void {
     this._loaderSubject.next({
       show: true,
       body: message,
@@ -33,4 +35,7 @@ export class VoxAlertConfirmService {
     });
   }
 
+  public hideModal(param?: any): void {
+    this._hiderSubject.next({ show: param });
+  }
 }
