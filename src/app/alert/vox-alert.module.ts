@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { NgbModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { AlertComponent } from './alert.component';
-import { AlertService } from './alert-service';
+import { VoxAlertComponent } from './vox-alert.component';
+import { VoxAlertService } from './vox-alert-service';
 
 @NgModule({
   imports: [
@@ -12,8 +12,8 @@ import { AlertService } from './alert-service';
     NgbModule,
     NgbModalModule.forRoot()
   ],
-  declarations: [ AlertComponent ],
-  exports: [ AlertComponent ],
-  providers: [ AlertService ]
+  declarations: [ VoxAlertComponent ],
+  exports: [ VoxAlertComponent ],
+  providers: [ VoxAlertService ]
 })
-export class AlertModule { }
+export class VoxAlertModule { }

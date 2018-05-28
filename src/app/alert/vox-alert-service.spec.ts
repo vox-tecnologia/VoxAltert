@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { AlertServiceService } from './alert-service.service';
+import { VoxAlertService } from './vox-alert-service';
 
 describe('AlertServiceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AlertServiceService]
+      providers: [VoxAlertService]
     });
   });
 
-  it('should be created', inject([AlertServiceService], (service: AlertServiceService) => {
+  it('should be created', inject([VoxAlertService], (service: VoxAlertService) => {
     expect(service).toBeTruthy();
   }));
 });
