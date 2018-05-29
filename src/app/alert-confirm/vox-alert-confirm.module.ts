@@ -5,6 +5,7 @@ import { NgbModule, NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { VoxAlertConfirmComponent } from './vox-alert-confirm.component';
 import { VoxAlertConfirmService } from './vox-alert-confirm-service';
+import { EventEmitterService } from './event-emitter.service';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { VoxAlertConfirmService } from './vox-alert-confirm-service';
   ],
   declarations: [ VoxAlertConfirmComponent ],
   exports: [ VoxAlertConfirmComponent ],
-  providers: [ VoxAlertConfirmService ]
+  providers: [ VoxAlertConfirmService, EventEmitterService ]
 })
 export class VoxAlertConfirmModule { }

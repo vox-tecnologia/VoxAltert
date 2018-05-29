@@ -3,7 +3,7 @@ export * from './alert/vox-alert-service';
 
 export * from './alert-confirm/vox-alert-confirm.module';
 export * from './alert-confirm/vox-alert-confirm-service';
-
+export * from './alert-confirm/event-emitter.service';
 
 
 
