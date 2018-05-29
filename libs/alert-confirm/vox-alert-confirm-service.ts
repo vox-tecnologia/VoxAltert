@@ -1,5 +1,5 @@
 import { Injectable, Input } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 import { EventEmitterService } from './event-emitter.service';
 @Injectable()
 export class VoxAlertConfirmService {

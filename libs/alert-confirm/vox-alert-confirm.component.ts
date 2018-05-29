@@ -9,7 +9,7 @@ import {
 
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 import { VoxAlertConfirmService } from './vox-alert-confirm-service';
 import { EventEmitterService } from './event-emitter.service';
@@ -19,7 +19,7 @@ import { EventEmitterService } from './event-emitter.service';
   templateUrl: './vox-alert-confirm.component.html',
   styleUrls: ['./vox-alert-confirm.component.css']
 })
-export class VoxAlertConfirmComponent implements OnInit {
+export class VoxAlertConfirmComponent implements OnInit, OnDestroy {
 
   @ViewChild('modal') private content: ElementRef;
 

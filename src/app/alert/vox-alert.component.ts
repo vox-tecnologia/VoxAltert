@@ -9,7 +9,7 @@ import {
 
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 import { VoxAlertService } from './vox-alert-service';
 
 @Component({
@@ -21,7 +21,6 @@ export class VoxAlertComponent implements OnInit, OnDestroy {
   @ViewChild('modal') private content: ElementRef;
 
   private _subscription: Subscription;
-  private _hidescription: Subscription;
   public show: boolean;
   public modalRef: NgbModalRef;
   public body: string;

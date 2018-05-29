@@ -1,20 +1,15 @@
 import { Injectable, Input } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class VoxAlertService {
 
   private _loaderSubject: Subject<any>;
-  private _hiderSubject: Subject<any>;
-
   public loaderState: any;
-  public hiderState: any;
 
   constructor() {
     this._loaderSubject = new Subject();
-    this._hiderSubject = new Subject();
     this.loaderState = this._loaderSubject.asObservable();
-    this.hiderState = this._hiderSubject.asObservable();
   }
 
   /**
@@ -35,7 +30,4 @@ export class VoxAlertService {
     });
   }
 
-  public hideModal(param?: any): void {
-    this._hiderSubject.next({ show: param });
-  }
 }

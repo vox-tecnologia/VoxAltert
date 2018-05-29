@@ -1,6 +1,6 @@
 {
   "name": "vox-alert",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "copy": "node copy.js",
-    "rm": "rm -rf libs/alert",
+    "rm": "rm -rf libs/alert && rm -rf libs/alert-confirm",
     "build:copy": "cp README.md vox/",
     "build:clear": "rm -rf vox/ && rm -rf dist/",
     "build:prod": "ng-packagr -p libs/package.json",
@@ -52,7 +52,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "ng-packagr": "^2.4.1",
+    "ng-packagr": "^3.0.0-rc.2",
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
